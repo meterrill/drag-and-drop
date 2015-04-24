@@ -1,4 +1,15 @@
 window.onload = function() {
+	function DisplayFormValues()
+	{
+			var txt = '';
+			var elem = document.getElementById('frmMain').elements;
+			for(var i = 0; i < elem.length; i++)
+			{
+					txt += "<b>Name:</b>" + " " + elem[i].name;
+			}
+			document.getElementById('lblValues').innerHTML = txt;
+	}
+
 	var dropTargets = document.querySelectorAll('#drop-targets li, #drop-targets input');
 	var dragElements = document.querySelectorAll('#drag-elements li');
 	var elementDragged = null;
@@ -36,7 +47,7 @@ window.onload = function() {
 			if (e.preventDefault) e.preventDefault();
 	  	if (e.stopPropagation) e.stopPropagation();
 			this.className = "form-control";
-			this.value = e.dataTransfer.getData('text');
+			this.innerHTML = e.dataTransfer.getData('text');
 			return false;
 		});
 	};
