@@ -1,20 +1,14 @@
-function DisplayFormValues() {
-	var elemArray = [];
-	var elem = document.getElementById('eventform').elements;
-	for(var i = 0; i < elem.length; i++) {
-			elemArray.push(elem[i].id);
-	}
-	document.getElementById('formValues').innerHTML = elemArray;
-}
-
 function makelist() {
 	var listContainer = document.createElement("div");
-	document.getElementsByTagName("body")[0].appendChild(listContainer);
+	listContainer.setAttribute("class", "col-sm-6")
+	document.getElementById("event-lists").appendChild(listContainer);
 	var listElement = document.createElement("ul");
+	listElement.setAttribute("id", "drop-targets");
 	listContainer.appendChild(listElement);
-	for(var i = 0; i < elemArray.length; i++) {
+	var elem = document.getElementById('eventform').elements;
+	for(var i = 0; i < elem.length; i++) {
 		var listItem = document.createElement("li");
-		listItem.innerHTML = elemArray[i];
+		listItem.innerHTML = elem[i].id;
 		listElement.appendChild(listItem);
 	}
 }

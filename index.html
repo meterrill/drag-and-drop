@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row">
+		<div class="row" id="event-lists">
 			<div class="col-sm-6">
 				<ul id="drag-elements">
 					<li draggable="true">Event Name</li>
@@ -19,13 +19,13 @@
 				</ul>
 			</div>
 
-			<div class="col-sm-6">
+			<!-- <div class="col-sm-6">
 				<ul id="drop-targets">
 					<li>Name</li>
 					<li>Venue</li>
 					<li>Description</li>
 				</ul>
-			</div>
+			</div> -->
 
 			<!-- <div class="col-sm-6">
 				<form id="drop-targets" class="form-horizontal">
@@ -59,13 +59,8 @@
 		        <input type="text" name="EventName" id="EventName">
 		        <input type="text" name="EventVenue" id="EventVenue">
 		        <input type="text" name="EventDescription" id="EventDescription">
-		        <input type="button" value="Test" onClick="DisplayFormValues();">
+		        <input type="button" value="Test" onClick="makelist();">
 		    </form>
-
-			</div>
-			<div class="col-sm-6">
-
-		    <div id="formValues"></div>
 
 			</div>
 		</div>
