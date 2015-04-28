@@ -1,15 +1,25 @@
-window.onload = function() {
-	function DisplayFormValues()
-	{
-			var txt = '';
-			var elem = document.getElementById('frmMain').elements;
-			for(var i = 0; i < elem.length; i++)
-			{
-					txt += "<b>Name:</b>" + " " + elem[i].name;
-			}
-			document.getElementById('lblValues').innerHTML = txt;
+function DisplayFormValues() {
+	var elemArray = [];
+	var elem = document.getElementById('eventform').elements;
+	for(var i = 0; i < elem.length; i++) {
+			elemArray.push(elem[i].id);
 	}
+	document.getElementById('formValues').innerHTML = elemArray;
+}
 
+function makelist() {
+	var listContainer = document.createElement("div");
+	document.getElementsByTagName("body")[0].appendChild(listContainer);
+	var listElement = document.createElement("ul");
+	listContainer.appendChild(listElement);
+	for(var i = 0; i < elemArray.length; i++) {
+		var listItem = document.createElement("li");
+		listItem.innerHTML = elemArray[i];
+		listElement.appendChild(listItem);
+	}
+}
+
+window.onload = function() {
 	var dropTargets = document.querySelectorAll('#drop-targets li, #drop-targets input');
 	var dragElements = document.querySelectorAll('#drag-elements li');
 	var elementDragged = null;

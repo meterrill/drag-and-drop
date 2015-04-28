@@ -54,16 +54,18 @@
 		<div class="row">
 			<div class="col-sm-6">
 
-		    <form id="frmMain" name="frmMain">
+		    <form id="eventform" name="eventform">
 		        <input type="hidden" name="ElemHidden" value="some hidden text">
-		        <input type="text" name="ElemText" value="some text">
+		        <input type="text" name="EventName" id="EventName">
+		        <input type="text" name="EventVenue" id="EventVenue">
+		        <input type="text" name="EventDescription" id="EventDescription">
 		        <input type="button" value="Test" onClick="DisplayFormValues();">
 		    </form>
 
 			</div>
 			<div class="col-sm-6">
 
-		    <div id="lblValues"></div>
+		    <div id="formValues"></div>
 
 			</div>
 		</div>
